@@ -186,8 +186,59 @@ let miles = convertKilometersToMiles(kilometers);
 document.getElementById('result').textContent = `${kilometers} kilometers is equal to ${miles.toFixed(2)} miles.`; } else {
                 document.getElementById('result').textContent = "Please enter a valid number.";}
         }
-    </script>                
-             
+</script>  
+<h1>Sum of Array & Table</h1
+<div>
+<h3>Array Sum:</h3>
+<p id="arrayResult">Sum of Array: </p>
+</div>
+<div>
+<h3>Table Row and Column Sum:</h3>
+<p id="rowResult">Sum of Row 1: </p>
+<p id="colResult">Sum of Column 2: </p>
+</div>
+<button onclick="displayResults()">Calculate Sum</button>
+     
+<h1>Sum of Array & Table</h1>
+<script>
+function sumOfArray(arr) {
+let sum = 0;
+for (let i = 0; i < arr.length; i++) {
+sum += arr[i];
+}
+return sum;
+}
+function sumOfRow(table, rowIndex) {
+let rowSum = 0;
+for (let i = 0; i < table[rowIndex].length; i++) {
+rowSum += table[rowIndex][i];
+}
+return rowSum;
+}
+function sumOfColumn(table, colIndex) {
+let colSum = 0;
+for (let i = 0; i < table.length; i++) {
+if (colIndex < table[i].length) {
+colSum += table[i][colIndex];
+}
+}
+ return colSum;
+ }
+      function displayResults() {
+let numbers = [3, -2, 4.5, 1];
+let arraySum = sumOfArray(numbers);
+document.getElementById("arrayResult").innerText = "Sum of Array: " + arraySum;
+let table = [
+ [1, 2, 3],
+ [4, 5, 6],
+ [7, 8, 9]
+];
+ let rowSum = sumOfRow(table, 1);  
+let colSum = sumOfColumn(table, 2); 
+document.getElementById("rowResult").innerText = "Sum of Row 1: " + rowSum;
+document.getElementById("colResult").innerText = "Sum of Column 2: " + colSum;
+      }
+  </script>      
 <div class="pagination">
     <a href=""><</a>
     <a href="index.html" class="active">1</a>
