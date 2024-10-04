@@ -267,7 +267,25 @@ document.getElementById('reversedArray').textContent = reversedArr.join(', ');
 
     let sortedArray = sortArray(arr);
     document.getElementById('sortedArray').textContent = sortedArray.join(', ');
-</script>               
+</script>
+ <h1>Filter Negative Numbers</h1>
+    
+<p>Enter a comma-separated list of numbers:</p>
+<input type="text" id="numberInput" placeholder="e.g., 1, -2, 3, -4, 5">
+<button onclick="removeNegativeNumbers()">Remove Negative Numbers</button>
+
+<p id="result"></p>
+<script>
+    function removeNegativeNumbers() {
+       const input = document.getElementById("numberInput").value;
+         const numbers = input.split(',').map(Number);
+        const filteredNumbers = numbers.filter(function(num) {
+            return num >= 0;
+        });
+document.getElementById("result").innerText = "Filtered Array: " + filteredNumbers.join(', ');
+    }
+</script>
+               
                 
 <div class="pagination">
     <a href=""><</a>
