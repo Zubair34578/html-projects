@@ -252,6 +252,22 @@ return array.reverse();}
 let reversedArr = reverseArray(arr);
 document.getElementById('reversedArray').textContent = reversedArr.join(', ');
 </script>
+ <h1>Sort An Array</h1>
+
+<p>Original Array: <span id="originalArray"></span></p>
+<p>Sorted Array: <span id="sortedArray"></span></p>
+
+<script>
+    let arr =[8, 1, -2, 4, 1.2, 6];
+    document.getElementById('originalArray').textContent = arr.join(', ');
+
+    function sortArray(array) {
+        return array.sort((a, b) => a - b);
+    }
+
+    let sortedArray = sortArray(arr);
+    document.getElementById('sortedArray').textContent = sortedArray.join(', ');
+</script>               
                 
 <div class="pagination">
     <a href=""><</a>
