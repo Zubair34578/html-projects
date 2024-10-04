@@ -238,7 +238,21 @@ let colSum = sumOfColumn(table, 2);
 document.getElementById("rowResult").innerText = "Sum of Row 1: " + rowSum;
 document.getElementById("colResult").innerText = "Sum of Column 2: " + colSum;
       }
-  </script>      
+  </script>
+
+<h1>Array Reverser</h1>
+
+<p>Original Array: <span id="originalArray"></span></p>
+<p>Reversed Array: <span id="reversedArray"></span></p>
+<script>
+    let arr = [1, 2, 3, 4, 5];
+    document.getElementById('originalArray').textContent = arr.join(', ');
+function reverseArray(array) {
+return array.reverse();}
+let reversedArr = reverseArray(arr);
+document.getElementById('reversedArray').textContent = reversedArr.join(', ');
+</script>
+                
 <div class="pagination">
     <a href=""><</a>
     <a href="index.html" class="active">1</a>
