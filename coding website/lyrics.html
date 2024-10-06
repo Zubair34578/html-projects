@@ -296,6 +296,17 @@ let str = document.getElementById('inputText').value;
 let result = str.replace(/\s+/g, '');
 document.getElementById('result').textContent = "String without spaces: " + result;
 </script>
+<h2>Check if a Number is Divisible by 10</h2>
+<label for="inputNumber">Enter a number:</label>
+<input type="number" id="inputNumber" placeholder="Enter number here">
+<button onclick="checkDivisibility()">Check Divisibility</button>
+<p id="result"></p>
+ <script>
+function checkDivisibility() {
+let number = parseInt(document.getElementById('inputNumber').value);
+let isDivisible = (number % 10 === 0);
+ document.getElementById('result').textContent = "Is divisible by 10? " + isDivisible;
+</script>
                
                 
 <div class="pagination">
