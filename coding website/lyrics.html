@@ -285,6 +285,17 @@ document.getElementById('reversedArray').textContent = reversedArr.join(', ');
 document.getElementById("result").innerText = "Filtered Array: " + filteredNumbers.join(', ');
     }
 </script>
+<h2>Remove Spaces from a String</h2>
+<label for="inputText">Enter a string:</label>
+<input type="text" id="inputText" placeholder="Enter text here">
+<button onclick="removeSpaces()">Remove Spaces</button>
+<p id="result"></p>
+<script>
+function removeSpaces() {
+let str = document.getElementById('inputText').value;
+let result = str.replace(/\s+/g, '');
+document.getElementById('result').textContent = "String without spaces: " + result;
+</script>
                
                 
 <div class="pagination">
