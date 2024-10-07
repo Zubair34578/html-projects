@@ -325,7 +325,23 @@ vowelCount++;}
 }
 document.getElementById('result').innerText = "Vowels Count: " + vowelCount;
 }
-</script>              
+</script>
+
+<h2>Count the Vowels and Characters in a String</h2>
+ <label for="inputString">Enter a string:</label>
+ <input type="text" id="inputString" placeholder="welcome"
+<button onclick="countVowels()">Count Vowels & Characters</button>
+ <p id="result"></p>
+
+<script>
+function countVowels() {
+let str = document.getElementById("inputString").value;
+let vowelCount = 0;
+let vowels = "AEIOUaeiou";
+for (let i = 0; i < str.length; i++) {
+if (vowels.indexOf(str[i]) !== -1) {vowelCount++;} }
+document.getElementById("result").innerHTML = `Total characters: ${str.length} <br> Total vowels: ${vowelCount}`;}
+</script>
                 
 <div class="pagination">
     <a href=""><</a>
