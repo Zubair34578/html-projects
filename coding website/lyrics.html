@@ -342,6 +342,19 @@ for (let i = 0; i < str.length; i++) {
 if (vowels.indexOf(str[i]) !== -1) {vowelCount++;} }
 document.getElementById("result").innerHTML = `Total characters: ${str.length} <br> Total vowels: ${vowelCount}`;}
 </script>
+
+<h2>Find the Maximum Number in an Array</h2>
+<label for="inputArray">Enter numbers separated by commas:</label>
+<input type="text" id="inputArray" placeholder="e.g., 1, 2, 3, -4, 5.5">
+<button onclick="findMax()">Find Maximum</button>
+ <p id="result"></p>
+ <script>
+function findMax() {
+let input = document.getElementById("inputArray").value;
+let numArray = input.split(',').map(Number);
+let maxNum = Math.max(...numArray);
+document.getElementById("result").innerHTML = `The maximum number is: ${maxNum}`;}
+ </script>
                 
 <div class="pagination">
     <a href=""><</a>
