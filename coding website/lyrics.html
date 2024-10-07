@@ -355,6 +355,21 @@ let numArray = input.split(',').map(Number);
 let maxNum = Math.max(...numArray);
 document.getElementById("result").innerHTML = `The maximum number is: ${maxNum}`;}
  </script>
+
+<h1>Palindrome Checker</h1>
+<input type="text" id="inputString" placeholder="Enter a string" />
+<button onclick="checkPalindrome()">Check</button>
+<div class="result" id="result"></div>
+<script>
+function checkPalindrome() {
+const input = document.getElementById("inputString").value;
+const cleanedInput = input.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+const reversedInput = cleanedInput.split('').reverse().join('');
+const isPalindrome = cleanedInput === reversedInput;
+document.getElementById("result").innerText = isPalindrome 
+? `"${input}" is a palindrome.` 
+: `"${input}" is not a palindrome.`;}
+    </script>
                 
 <div class="pagination">
     <a href=""><</a>
